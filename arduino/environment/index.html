@@ -399,16 +399,23 @@
 <h1 id="_1">環境構築</h1>
 <p>Arduino webページを参照してください<br />
 <a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p>
+<p>Arduino IDEを公式HPよりダウンロードし，インストールしてください．</p>
 <h1 id="nucleo64">Nucleo64ボード向けのセットアップ</h1>
-<p>ブログを参照してください<br />
-<a href="https://www.denshi.club/pc/nucleo/nucleoarduino1blink.html">https://www.denshi.club/pc/nucleo/nucleoarduino1blink.html</a></p>
+<p>ドキュメントを参照してください<br />
+<a href="https://github.com/stm32duino/Arduino_Core_STM32/wiki/Getting-Started">https://github.com/stm32duino/Arduino_Core_STM32/wiki/Getting-Started</a></p>
+<ol>
+<li><strong>File (ファイル)</strong>から<strong>Preferences (基本設定)</strong>を開く</li>
+<li><strong>Additional boards managers URLs (追加のボードマネージャーのURL)</strong>に<code>https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json</code>を追記する</li>
+<li><strong>BOARDS MANAGER (ボードマネージャ)</strong>で<em>STM32</em>と検索し，<strong>STM32 MCU based boards</strong>をインストールする</li>
+</ol>
+<p><img alt="" src="../res/boardManager.png" /></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 28, 2023</span>
       
     
   </small>
