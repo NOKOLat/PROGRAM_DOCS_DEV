@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../LED_Brink/">
       
-      
-        <link rel="next" href="../LED_Brink/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>1. 環境構築 - Programming Documents</title>
+        <title>3. UART通信(serial) - Programming Documents</title>
       
     
     
@@ -76,11 +74,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#1" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -113,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. 環境構築
+              3. UART通信(serial)
             
           </span>
         </div>
@@ -307,18 +300,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../environment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -327,7 +311,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -357,9 +340,16 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../serial/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -368,6 +358,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -397,8 +388,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -416,19 +405,9 @@
   
 
 
-<h1 id="1">1. 環境構築</h1>
-<p>Arduino webページを参照してください<br />
-<a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p>
-<p>Arduino IDEを公式HPよりダウンロードし，インストールしてください．</p>
-<h1 id="nucleo64">Nucleo64ボード向けのセットアップ</h1>
-<p>ドキュメントを参照してください<br />
-<a href="https://github.com/stm32duino/Arduino_Core_STM32/wiki/Getting-Started">https://github.com/stm32duino/Arduino_Core_STM32/wiki/Getting-Started</a></p>
-<ol>
-<li><strong>File (ファイル)</strong>から<strong>Preferences (基本設定)</strong>を開く</li>
-<li><strong>Additional boards managers URLs (追加のボードマネージャーのURL)</strong>に<code>https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json</code>を追記する</li>
-<li><strong>BOARDS MANAGER (ボードマネージャ)</strong>で<em>STM32</em>と検索し，<strong>STM32 MCU based boards</strong>をインストールする</li>
-</ol>
-<p><img alt="" src="../res/boardManager.png" /></p>
+  <h1>3. UART通信(serial)</h1>
+
+
 
   <hr>
 <div class="md-source-file">
