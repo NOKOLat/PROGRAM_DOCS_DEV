@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../LED_Brink/">
+        <link rel="prev" href="../serial/">
       
-      
-        <link rel="next" href="../SBUS/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>3. UART通信(serial) - Programming Documents</title>
+        <title>4. S.BUSの受信 - Programming Documents</title>
       
     
     
@@ -77,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#3-uartserial" class="md-skip">
+        <a href="#4-sbus" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3. UART通信(serial)
+              4. S.BUSの受信
             
           </span>
         </div>
@@ -347,6 +345,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../serial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. UART通信(serial)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -362,7 +380,7 @@
           
   
   <span class="md-ellipsis">
-    3. UART通信(serial)
+    4. S.BUSの受信
   </span>
   
 
@@ -373,7 +391,7 @@
         
   
   <span class="md-ellipsis">
-    3. UART通信(serial)
+    4. S.BUSの受信
   </span>
   
 
@@ -402,14 +420,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    シリアル通信とは
+  <a href="#sbus" class="md-nav__link">
+    S.BUSとは
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#sbus_1" class="md-nav__link">
+    S.BUSを受信するための回路
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     コード解説
   </a>
   
@@ -417,36 +442,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#void-serialbeginunsigned-long-baud-byte-config" class="md-nav__link">
-    void Serial.begin(unsigned long baud, byte config)
+  <a href="#whileserialavailablesbus_len" class="md-nav__link">
+    while(Serial.available()&lt;SBUS_LEN)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#size_t-serialprintlnconst-string-s" class="md-nav__link">
-    size_t Serial.println(const String &amp;s)
+  <a href="#serialwriteuint8_t-sbusreceivefrontsbus_len" class="md-nav__link">
+    Serial.write((uint8_t *)sbusReceive.front(),SBUS_LEN)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#int-serialavailable" class="md-nav__link">
-    int Serial.available()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#string-serialreadstring" class="md-nav__link">
-    String Serial.readString()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strtrim" class="md-nav__link">
-    str.trim()
+  <a href="#digitalwrite13-digitalread13" class="md-nav__link">
+    digitalWrite(13, !digitalRead(13))
   </a>
   
 </li>
@@ -458,7 +469,7 @@
       
         <li class="md-nav__item">
   <a href="#source-code" class="md-nav__link">
-    Source Code
+    Source code
   </a>
   
 </li>
@@ -467,26 +478,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../SBUS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    4. S.BUSの受信
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -533,14 +524,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    シリアル通信とは
+  <a href="#sbus" class="md-nav__link">
+    S.BUSとは
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#sbus_1" class="md-nav__link">
+    S.BUSを受信するための回路
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     コード解説
   </a>
   
@@ -548,36 +546,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#void-serialbeginunsigned-long-baud-byte-config" class="md-nav__link">
-    void Serial.begin(unsigned long baud, byte config)
+  <a href="#whileserialavailablesbus_len" class="md-nav__link">
+    while(Serial.available()&lt;SBUS_LEN)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#size_t-serialprintlnconst-string-s" class="md-nav__link">
-    size_t Serial.println(const String &amp;s)
+  <a href="#serialwriteuint8_t-sbusreceivefrontsbus_len" class="md-nav__link">
+    Serial.write((uint8_t *)sbusReceive.front(),SBUS_LEN)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#int-serialavailable" class="md-nav__link">
-    int Serial.available()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#string-serialreadstring" class="md-nav__link">
-    String Serial.readString()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strtrim" class="md-nav__link">
-    str.trim()
+  <a href="#digitalwrite13-digitalread13" class="md-nav__link">
+    digitalWrite(13, !digitalRead(13))
   </a>
   
 </li>
@@ -589,7 +573,7 @@
       
         <li class="md-nav__item">
   <a href="#source-code" class="md-nav__link">
-    Source Code
+    Source code
   </a>
   
 </li>
@@ -612,47 +596,45 @@
   
 
 
-<h1 id="3-uartserial">3. UART通信(serial)</h1>
+<h1 id="4-sbus">4. S.BUSの受信</h1>
 <h2 id="_1">目標</h2>
 <ul>
-<li>Serialの基本的な機能を使えるようななる</li>
-<li>Arduino IDEのシリアルモニターの使い方を学ぶ</li>
+<li>S.BUS信号について理解する</li>
+<li>S.BUS信号を受信するプログラムおよび回路を理解できる</li>
 </ul>
-<h2 id="_2">シリアル通信とは</h2>
-<h2 id="_3">コード解説</h2>
-<h3 id="void-serialbeginunsigned-long-baud-byte-config"><code>void Serial.begin(unsigned long baud, byte config)</code></h3>
-<p>第1引数ではシリアル通信の通信速度を決定する．<em>9600</em>や<em>115200</em>がよく使用される．
-第2引数はシリアル通信のフォーマットを決定する．デフォルト値を使用する場合は省略して構わない．
-フォーマットについては別途，解説する．</p>
-<h3 id="size_t-serialprintlnconst-string-s"><code>size_t Serial.println(const String &amp;s)</code></h3>
-<p>第１引数に送信したい文字列を入れることで文字列の送信をする．
-この関数では送信文字列の最後に改行コードが自動で追加される．
-引数の型はいくつかあり，String型以外でも使用可能なので調べて使って欲しい．</p>
-<h3 id="int-serialavailable"><code>int Serial.available()</code></h3>
-<p>Serial通信で受信したデータの長さを取得する．返り値が<em>0</em>でないときは，何かしらのデータを受信したときである．</p>
-<p><code>while(!Serial.available());</code>とすることで，データを受信するまで待機することができる．</p>
-<h3 id="string-serialreadstring"><code>String Serial.readString()</code></h3>
-<p>Serial通信で受信したデータを文字列として取得するための関数である．</p>
-<h3 id="strtrim"><code>str.trim()</code></h3>
-<p>文字列の最後についている改行コードを切り取るために使用している．</p>
-<h2 id="source-code">Source Code</h2>
-<div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<h2 id="sbus">S.BUSとは</h2>
+<p>UART信号を反転したものである．
+- 通信速度 : 100000bps
+- ストップビット : 2bit
+- パリティ : even parity</p>
+<h2 id="sbus_1">S.BUSを受信するための回路</h2>
+<p>S.BUS信号をUART信号に変換するためには信号を反転すればよいため，NOT回路を入れる．</p>
+<h2 id="_2">コード解説</h2>
+<h3 id="whileserialavailablesbus_len"><code>while(Serial.available()&lt;SBUS_LEN)</code></h3>
+<p>S.BUS信号の長さが25byteであるため，25byteごとに受信処理を実行するように待機する．</p>
+<h3 id="serialwriteuint8_t-sbusreceivefrontsbus_len"><code>Serial.write((uint8_t *)sbusReceive.front(),SBUS_LEN)</code></h3>
+<p>受信した値をそのままシリアルモニタに表示するために送信する．</p>
+<h3 id="digitalwrite13-digitalread13"><code>digitalWrite(13, !digitalRead(13))</code></h3>
+<p>プログラムの動作確認用のコード．正常動作時は，LEDが高速で点滅する．人の目には点灯しているように見える．
+上手く動いていないときは，消灯もしくは点灯する．</p>
+<h2 id="source-code">Source code</h2>
+<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;array&gt;</span>
+
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SBUS_LEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// put your setup code here, to run once:</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">,</span><span class="w"> </span><span class="n">SERIAL_8N1</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">);</span>
-
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">100000</span><span class="p">,</span><span class="w"> </span><span class="n">SERIAL_8E2</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// put your main code here, to run repeatedly:</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;waiting...&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">Serial</span><span class="p">.</span><span class="n">available</span><span class="p">());</span>
-<span class="w">  </span><span class="n">String</span><span class="w">　</span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">readString</span><span class="p">();</span>
-<span class="w">  </span><span class="n">str</span><span class="p">.</span><span class="n">trim</span><span class="p">();</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Received Str is </span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">while</span><span class="p">(</span><span class="n">Serial</span><span class="p">.</span><span class="n">available</span><span class="p">()</span><span class="o">&lt;</span><span class="n">SBUS_LEN</span><span class="p">);</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="p">,</span><span class="w"> </span><span class="n">SBUS_LEN</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sbusReceive</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">readBytes</span><span class="p">((</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">sbusReceive</span><span class="p">.</span><span class="n">front</span><span class="p">(),</span><span class="n">SBUS_LEN</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">((</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">sbusReceive</span><span class="p">.</span><span class="n">front</span><span class="p">(),</span><span class="n">SBUS_LEN</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">13</span><span class="p">));</span>
 <span class="p">}</span>
 </code></pre></div>
 
