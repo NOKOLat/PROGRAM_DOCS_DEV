@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#3-uartserial" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -348,6 +353,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3. UART通信(serial)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -358,6 +376,94 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    目標
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    シリアル通信とは
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    コード解説
+  </a>
+  
+    <nav class="md-nav" aria-label="コード解説">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-serialbeginunsigned-long-baud-byte-config" class="md-nav__link">
+    void Serial.begin(unsigned long baud, byte config)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#size_t-serialprintlnconst-string-s" class="md-nav__link">
+    size_t Serial.println(const String &amp;s)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-serialavailable" class="md-nav__link">
+    int Serial.available()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-serialreadstring" class="md-nav__link">
+    String Serial.readString()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strtrim" class="md-nav__link">
+    str.trim()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    Source Code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -388,6 +494,85 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    目標
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    シリアル通信とは
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    コード解説
+  </a>
+  
+    <nav class="md-nav" aria-label="コード解説">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-serialbeginunsigned-long-baud-byte-config" class="md-nav__link">
+    void Serial.begin(unsigned long baud, byte config)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#size_t-serialprintlnconst-string-s" class="md-nav__link">
+    size_t Serial.println(const String &amp;s)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-serialavailable" class="md-nav__link">
+    int Serial.available()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-serialreadstring" class="md-nav__link">
+    String Serial.readString()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strtrim" class="md-nav__link">
+    str.trim()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    Source Code
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -405,9 +590,49 @@
   
 
 
-  <h1>3. UART通信(serial)</h1>
+<h1 id="3-uartserial">3. UART通信(serial)</h1>
+<h2 id="_1">目標</h2>
+<ul>
+<li>Serialの基本的な機能を使えるようななる</li>
+<li>Arduino IDEのシリアルモニターの使い方を学ぶ</li>
+</ul>
+<h2 id="_2">シリアル通信とは</h2>
+<h2 id="_3">コード解説</h2>
+<h3 id="void-serialbeginunsigned-long-baud-byte-config"><code>void Serial.begin(unsigned long baud, byte config)</code></h3>
+<p>第1引数ではシリアル通信の通信速度を決定する．<em>9600</em>や<em>115200</em>がよく使用される．
+第2引数はシリアル通信のフォーマットを決定する．デフォルト値を使用する場合は省略して構わない．
+フォーマットについては別途，解説する．</p>
+<h3 id="size_t-serialprintlnconst-string-s"><code>size_t Serial.println(const String &amp;s)</code></h3>
+<p>第１引数に送信したい文字列を入れることで文字列の送信をする．
+この関数では送信文字列の最後に改行コードが自動で追加される．
+引数の型はいくつかあり，String型以外でも使用可能なので調べて使って欲しい．</p>
+<h3 id="int-serialavailable"><code>int Serial.available()</code></h3>
+<p>Serial通信で受信したデータの長さを取得する．返り値が<em>0</em>でないときは，何かしらのデータを受信したときである．</p>
+<p><code>while(!Serial.available());</code>とすることで，データを受信するまで待機することができる．</p>
+<h3 id="string-serialreadstring"><code>String Serial.readString()</code></h3>
+<p>Serial通信で受信したデータを文字列として取得するための関数である．</p>
+<h3 id="strtrim"><code>str.trim()</code></h3>
+<p>文字列の最後についている改行コードを切り取るために使用している．</p>
+<h2 id="source-code">Source Code</h2>
+<div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// put your setup code here, to run once:</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">,</span><span class="w"> </span><span class="n">SERIAL_8N1</span><span class="p">);</span>
 
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">);</span>
 
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// put your main code here, to run repeatedly:</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;waiting...&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">Serial</span><span class="p">.</span><span class="n">available</span><span class="p">());</span>
+<span class="w">  </span><span class="n">String</span><span class="w">　</span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">readString</span><span class="p">();</span>
+<span class="w">  </span><span class="n">str</span><span class="p">.</span><span class="n">trim</span><span class="p">();</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Received Str is </span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
