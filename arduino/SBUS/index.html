@@ -603,12 +603,15 @@
 <li>S.BUS信号を受信するプログラムおよび回路を理解できる</li>
 </ul>
 <h2 id="sbus">S.BUSとは</h2>
-<p>UART信号を反転したものである．
-- 通信速度 : 100000bps
-- ストップビット : 2bit
-- パリティ : even parity</p>
+<p>UART信号を反転したものである．</p>
+<ul>
+<li>通信速度 : 100000bps</li>
+<li>ストップビット : 2bit</li>
+<li>パリティ : even parity</li>
+</ul>
 <h2 id="sbus_1">S.BUSを受信するための回路</h2>
-<p>S.BUS信号をUART信号に変換するためには信号を反転すればよいため，NOT回路を入れる．</p>
+<p>S.BUS信号をUART信号に変換するためには信号を反転すればよいため，NOT回路を入れる．
+<img alt="" src="../res/sbus.png" /></p>
 <h2 id="_2">コード解説</h2>
 <h3 id="whileserialavailablesbus_len"><code>while(Serial.available()&lt;SBUS_LEN)</code></h3>
 <p>S.BUS信号の長さが25byteであるため，25byteごとに受信処理を実行するように待機する．</p>
