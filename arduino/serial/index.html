@@ -410,6 +410,40 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    シリアルモニタの使用方法
+  </a>
+  
+    <nav class="md-nav" aria-label="シリアルモニタの使用方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    シリアルモニタとは
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    使用方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    その他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     コード解説
   </a>
   
@@ -431,6 +465,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#size_t-serialprintconst-string-s" class="md-nav__link">
+    size_t Serial.print(const String &amp;s)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#int-serialavailable" class="md-nav__link">
     int Serial.available()
   </a>
@@ -445,14 +486,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#strtrim" class="md-nav__link">
-    str.trim()
+  <a href="#stringtrim-strtrim" class="md-nav__link">
+    String::trim() (str.trim())
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    コードの実行結果
+  </a>
   
 </li>
       
@@ -560,6 +608,40 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    シリアルモニタの使用方法
+  </a>
+  
+    <nav class="md-nav" aria-label="シリアルモニタの使用方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    シリアルモニタとは
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    使用方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    その他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     コード解説
   </a>
   
@@ -581,6 +663,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#size_t-serialprintconst-string-s" class="md-nav__link">
+    size_t Serial.print(const String &amp;s)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#int-serialavailable" class="md-nav__link">
     int Serial.available()
   </a>
@@ -595,14 +684,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#strtrim" class="md-nav__link">
-    str.trim()
+  <a href="#stringtrim-strtrim" class="md-nav__link">
+    String::trim() (str.trim())
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    コードの実行結果
+  </a>
   
 </li>
       
@@ -638,7 +734,27 @@
 <li>Arduino IDEのシリアルモニターの使い方を学ぶ</li>
 </ul>
 <h2 id="_2">シリアル通信とは</h2>
-<h2 id="_3">コード解説</h2>
+<h2 id="_3">シリアルモニタの使用方法</h2>
+<h3 id="_4">シリアルモニタとは</h3>
+<p>PCがマイコンから受信したデータを表示したり，PCからマイコンへデータを送信するためのものである．  </p>
+<h3 id="_5">使用方法</h3>
+<ul>
+<li>画面右上のボタンもしくはメニューバーのツールからシリアルモニタを選択することでシリアルモニタを開く<ul>
+<li>シリアルモニタは画面下部に表示される</li>
+</ul>
+</li>
+<li>シリアルモニタの上部にはPCから送信する文字列を入力するボックスと送信文字列の改行コード，通信速度の設定がある<ul>
+<li>通信速度はソースコードで指定した値(9600bps)にする必要がある</li>
+</ul>
+</li>
+<li>受信した文字列はシリアルモニタに表示される
+<img alt="" src="../res/serialMonitor.png" /></li>
+</ul>
+<h3 id="_6">その他</h3>
+<p>Arduino IDEに内蔵されているシリアルモニタ以外にも様々なシリアルモニタが存在する．
+Arduino IDE内蔵のものでは，文字列以外のデータを表示することには適さない．
+デバックモードを有効にしたTera TermやYAT, CuteComなどを使用したほうが，シリアルモニタとしての自由度は高い．</p>
+<h2 id="_7">コード解説</h2>
 <h3 id="void-serialbeginunsigned-long-baud-byte-config"><code>void Serial.begin(unsigned long baud, byte config)</code></h3>
 <p>第1引数ではシリアル通信の通信速度を決定する．<em>9600</em>や<em>115200</em>がよく使用される．
 第2引数はシリアル通信のフォーマットを決定する．デフォルト値を使用する場合は省略して構わない．
@@ -647,13 +763,20 @@
 <p>第１引数に送信したい文字列を入れることで文字列の送信をする．
 この関数では送信文字列の最後に改行コードが自動で追加される．
 引数の型はいくつかあり，String型以外でも使用可能なので調べて使って欲しい．</p>
+<h3 id="size_t-serialprintconst-string-s"><code>size_t Serial.print(const String &amp;s)</code></h3>
+<p>第１引数に送信したい文字列を入れることで文字列の送信をする．
+引数の型はいくつかあり，String型以外でも使用可能なので調べて使って欲しい．</p>
 <h3 id="int-serialavailable"><code>int Serial.available()</code></h3>
 <p>Serial通信で受信したデータの長さを取得する．返り値が<em>0</em>でないときは，何かしらのデータを受信したときである．</p>
 <p><code>while(!Serial.available());</code>とすることで，データを受信するまで待機することができる．</p>
 <h3 id="string-serialreadstring"><code>String Serial.readString()</code></h3>
 <p>Serial通信で受信したデータを文字列として取得するための関数である．</p>
-<h3 id="strtrim"><code>str.trim()</code></h3>
-<p>文字列の最後についている改行コードを切り取るために使用している．</p>
+<h3 id="stringtrim-strtrim"><code>String::trim()</code> (<code>str.trim()</code>)</h3>
+<p>受信した文字列の最後についている改行コードを切り取るために使用している．</p>
+<h2 id="_8">コードの実行結果</h2>
+<p>シリアルモニタを開いた状態でプログラムを書き込むと（マイコンをリセットすると）はじめに「Hello world」と表示される．
+2行目には「waiting...」と表示され，マイコンは文字列の受信待機状態となる．
+シリアルモニタからメッセージ「<em>任意のメッセージ</em>」を送信すると，「Received: <em>任意のメッセージ</em>」と表示される．</p>
 <h2 id="source-code">Source Code</h2>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// put your setup code here, to run once:</span>
@@ -666,12 +789,12 @@
 <span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// put your main code here, to run repeatedly:</span>
 <span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;waiting...&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="p">;</span>
 <span class="w">  </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">Serial</span><span class="p">.</span><span class="n">available</span><span class="p">());</span>
-<span class="w">  </span><span class="n">String</span><span class="w">　</span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">readString</span><span class="p">();</span>
+<span class="w">  </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">readString</span><span class="p">();</span>
 <span class="w">  </span><span class="n">str</span><span class="p">.</span><span class="n">trim</span><span class="p">();</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Received Str is </span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Received: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 
