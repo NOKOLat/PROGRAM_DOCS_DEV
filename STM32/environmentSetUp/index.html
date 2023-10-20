@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="../../arduino/serial/">
       
-        <link rel="next" href="arduino/environment/">
+      
+        <link rel="next" href="../serial/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
       
-        <title>Programming Documents</title>
+        <title>1. 環境構築とLチカ - Programming Documents</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -46,7 +48,7 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#l" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +93,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Programming Documents" class="md-header__button md-logo" aria-label="Programming Documents" data-md-component="logo">
+    <a href="../.." title="Programming Documents" class="md-header__button md-logo" aria-label="Programming Documents" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TOP
+              1. 環境構築とLチカ
             
           </span>
         </div>
@@ -221,7 +223,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Programming Documents" class="md-nav__button md-logo" aria-label="Programming Documents" data-md-component="logo">
+    <a href="../.." title="Programming Documents" class="md-nav__button md-logo" aria-label="Programming Documents" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -248,29 +250,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    TOP
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -279,60 +261,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    目次
-  </a>
-  
-    <nav class="md-nav" aria-label="目次">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#arduino" class="md-nav__link">
-    Arduinoを用いた学習
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stm32" class="md-nav__link">
-    STM32を使う
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stm32_1" class="md-nav__link">
-    STM32のドキュメントについて
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -379,7 +307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="arduino/environment/" class="md-nav__link">
+      <a href="../../arduino/environment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -399,7 +327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="arduino/LED_Brink/" class="md-nav__link">
+      <a href="../../arduino/LED_Brink/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -419,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="arduino/serial/" class="md-nav__link">
+      <a href="../../arduino/serial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -444,18 +372,20 @@
       
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -469,7 +399,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             STM32
@@ -480,9 +410,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="STM32/environmentSetUp/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1. 環境構築とLチカ
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -491,6 +441,115 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    ソフトウェアのインストール
+  </a>
+  
+    <nav class="md-nav" aria-label="ソフトウェアのインストール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stm32cubeide" class="md-nav__link">
+    STM32CubeIDE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stm-studio" class="md-nav__link">
+    STM Studio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stm32cubemonitor" class="md-nav__link">
+    STM32CubeMonitor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stm32cubeprogrammer" class="md-nav__link">
+    STM32CubeProgrammer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stm32cubeidel" class="md-nav__link">
+    STM32CubeIDEを使ってLチカをする
+  </a>
+  
+    <nav class="md-nav" aria-label="STM32CubeIDEを使ってLチカをする">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stm32cubeide_1" class="md-nav__link">
+    STM32CubeIDEの起動
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project" class="md-nav__link">
+    Projectの作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ペリフェラルの設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    プログラミング
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refarences" class="md-nav__link">
+    Refarences
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -502,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="STM32/serial/" class="md-nav__link">
+      <a href="../serial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="communication/" class="md-nav__link">
+      <a href="../../communication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -569,23 +628,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    目次
+  <a href="#_1" class="md-nav__link">
+    ソフトウェアのインストール
   </a>
   
-    <nav class="md-nav" aria-label="目次">
+    <nav class="md-nav" aria-label="ソフトウェアのインストール">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#arduino" class="md-nav__link">
-    Arduinoを用いた学習
+  <a href="#stm32cubeide" class="md-nav__link">
+    STM32CubeIDE
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stm32" class="md-nav__link">
-    STM32を使う
+  <a href="#stm-studio" class="md-nav__link">
+    STM Studio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stm32cubemonitor" class="md-nav__link">
+    STM32CubeMonitor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stm32cubeprogrammer" class="md-nav__link">
+    STM32CubeProgrammer
   </a>
   
 </li>
@@ -596,8 +669,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stm32_1" class="md-nav__link">
-    STM32のドキュメントについて
+  <a href="#stm32cubeidel" class="md-nav__link">
+    STM32CubeIDEを使ってLチカをする
+  </a>
+  
+    <nav class="md-nav" aria-label="STM32CubeIDEを使ってLチカをする">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stm32cubeide_1" class="md-nav__link">
+    STM32CubeIDEの起動
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project" class="md-nav__link">
+    Projectの作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ペリフェラルの設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    プログラミング
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refarences" class="md-nav__link">
+    Refarences
   </a>
   
 </li>
@@ -620,32 +734,82 @@
   
 
 
-<h1 id="_1">はじめに</h1>
-<p>本ドキュメントは東京農工大学航空研究会 (NOKOlat)のマルチコプター部門向けに作成する．
-電装班が自動操縦を目指すにあたって，勉強すべきことを書いていく予定である．
-ドキュメントではArduinoを用いるが，実用には向かないためSTM32マイコンなどを別に学習することをお勧めする．</p>
-<h2 id="_2">目次</h2>
-<h3 id="arduino">Arduinoを用いた学習</h3>
+<h1 id="l">環境構築とLチカ</h1>
+<p>STMマイコンのプログラムを書く際に必要となるソフトウェアのインストールからテストコードの作成・実行までを解説する．</p>
+<h2 id="_1">ソフトウェアのインストール</h2>
+<p>ここでは，マイコンのプログラを書くにあたって有益なソフトウェアを紹介する．本ドキュメントでは使用しないソフトウェアも入っているため，ここに紹介するソフトウェアをすべてインストールする必要はない．ただし，<a href="#stm32cubeide">STM32CubeIDE</a>だけは必ずインストールしてほしい．</p>
+<p>ST社のソフトウェアのダウンロードには名前，メールアドレスの入力もしくは，ログインが必要となる．
+ここでは，<a href="https://www.st.com/content/st_com/ja/user-registration.html?referrer=https%3a%2f%2fwww.st.com%2fcontent%2fst_com%2fja.html">アカウントを作成する</a>ことを推奨する．</p>
+<h3 id="stm32cubeide"><a href="https://www.st.com/ja/development-tools/stm32cubeide.html">STM32CubeIDE</a></h3>
+<p>本ソフトウェアはSTM32用統合開発環境であり，ペリフェラル設定からプログラムの書き込み，デバックまでを一貫して行うことができる．STMマイコンの開発を行ううえでほぼ必須となるソフトウェアである．</p>
+<p><a href="https://www.st.com/ja/development-tools/stm32cubeide.html">webサイト</a>にアクセスしたら <strong>ソフトウェアの入手</strong> より各自の環境に合う最新のものをダウンロード，インストールしてほしい．Windowsであれば <strong>STM32CubeIDE-Win</strong> が該当する．</p>
+<h3 id="stm-studio"><a href="https://www.st.com/ja/development-tools/stm-studio-stm32.html">STM Studio</a></h3>
+<p>グローバル変数の値をほぼリアルタイムでモニタリングするためのソフトウェアである．記事の執筆時点において <em>NRND</em> となっているため，近いうちに提供が終了となる可能性がある．後継のソフトウェアとして<a href="#stm32cubemonitor">STM32CubeMonitor</a>が存在する．</p>
+<h3 id="stm32cubemonitor"><a href="https://www.st.com/ja/development-tools/stm32cubeprog.html">STM32CubeMonitor</a></h3>
+<p>動作中のマイコンをモニタリングするためのソフトウェアである．筆者は本ソフトウェアにあまり触れていないため詳しいことは分からない．</p>
+<h3 id="stm32cubeprogrammer"><a href="https://www.st.com/ja/development-tools/stm32cubeprog.html">STM32CubeProgrammer</a></h3>
+<p>実行ファイルをマイコンに書き込むために使用するソフトウェアである．マイコンへの書き込みはSTM32CubeIDEでも可能であるが，こちらの方が高機能である．</p>
+<h2 id="stm32cubeidel">STM32CubeIDEを使ってLチカをする</h2>
+<p>「Lチカ」とはLEDを点滅させることを言う．プログラミングを学んだことがあれば "Hello World" に出会ったことがあると思うが，Lチカはそれのマイコン版だと考えてほしい．</p>
+<h3 id="stm32cubeide_1">STM32CubeIDEの起動</h3>
+<p><img alt="" src="_res/environmentBuilding/start_cubeide.avif" /><br />
+1. STM32CubeIDEを起動すると，Launcherが表示される<br />
+2. <strong>workspace</strong>の選択をする</p>
+<blockquote>
+<p>"workspace" とはSTM32CubeIDEで作成するプロジェクトを置く場所である．デフォルトのまま <code>Launch</code> を押して問題ない．</dd>
+3. STM32CubeIDEが起動が完了する
+初回起動時は <code>Infomation Center</code> が開かれているが，特に必要ないのでそのタブは消してよい．</p>
+</blockquote>
+<h3 id="project">Projectの作成</h3>
+<ol>
+<li>メニューバーから <code>File/New/STM32 Project</code> を選択する<blockquote>
+<p>データのダウンロードが自動で行われることがある</p>
+</blockquote>
+</li>
+<li>マイコンの選択を行う<blockquote>
+<ol>
+<li><code>Board Selector</code>タブを選択する</li>
+<li><code>Commercial Part Number</code>に "NUCLEO-F446RE"と入力する</li>
+<li>ボードを選択する</li>
+<li>次へ進む
+  <img alt="" src="_res/environmentBuilding/Board-select.png" /></li>
+</ol>
+</blockquote>
+</li>
+<li><code>Project Name</code>を入力する<blockquote>
+<p><img alt="" src="_res/environmentBuilding/projectName.png" /></p>
+</blockquote>
+</li>
+</ol>
+<p>以上で，プロジェクトの作成は終わりである．3の後でいくつかダイアログボックスが表示されることがあるが，すべて <code>Yes/OK</code> を選べば問題ない．</p>
+<h3 id="_2">ペリフェラルの設定</h3>
+<p>ここでは，マイコンに搭載されている機能のうち <strong>何を使用するか</strong> と <strong>どのピンを使用するか</strong> を設定する．今回はNucleoボードに搭載されているLEDを使用するため，ここでの設定事項は特にないが，画面の説明だけ記載しておく．</p>
+<p>赤で囲われた部分にはマイコンが搭載している機能が一覧形式で表示されている．ここから設定したい項目を選択すると，黄色で囲われた部分が表示される．ここでは，各機能の設定ができる．</p>
+<p>青で囲われた部分ではマイコンのどのピンを使用するかを確認・設定できる．また，各ピンにはPA0,PA1,...,PC15,... のように名前が割り当てられている．この名前はソースコードを書く際に，ピンを指定するために必要となる．</p>
+<p><code>PA5</code>（下の列の左から5番目） に <code>LD2[Green Led]</code>とある．このピンが今回のプログラムで点滅させるLEDに接続されている．いまは特に設定することはないのでこのタブは閉じてよい．</p>
+<p><img alt="" src="../_res/environmentSetUp/cubeMX.png" /></p>
+<h3 id="_3">プログラミング</h3>
+<p>プロジェクトを作成したとき，ペリフェラルの設定を変更したときに，その設定を反映したプログラムが自動生成される．自動生成されたコードとユーザーが書いたコードを区別するために，自動生成されたファイルにはユーザーがコードを書いていい範囲が決まっているため注意が必要である．
+<code>/* USER CODE BEGIN xxxxx */</code> と <code>/* USER CODE END xxxxx */</code> の間の記述はユーザーのコードとして認識される．</p>
+<p><code>Project Name/Core/Src/main.c</code>にプログラムを書いていく．編集が必要な部分を以下に示す．</p>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="cm">/* USER CODE BEGIN WHILE */</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span><span class="w"> </span><span class="n">GPIO_PIN_5</span><span class="p">,</span><span class="w"> </span><span class="n">GPIO_PIN_SET</span><span class="p">);</span>
+<span class="w">    </span><span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="w">    </span><span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span><span class="w"> </span><span class="n">GPIO_PIN_5</span><span class="p">,</span><span class="w"> </span><span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
+<span class="w">    </span><span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/* USER CODE END WHILE */</span>
+
+<span class="w">    </span><span class="cm">/* USER CODE BEGIN 3 */</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="cm">/* USER CODE END 3 */</span>
+</code></pre></div>
+
+<h2 id="refarences">Refarences</h2>
 <ul>
-<li>Arduino開発環境の構築</li>
-<li>LEDの点滅</li>
-<li>PCとシリアル通信(UART)をしよう</li>
-<li>S.Busを受信してPCへ送ろう(作成中)</li>
-<li>サーボモーターを制御する(PWM)</li>
+<li><a href="https://github.com/NOKOLat/LED-Brink">Sample Code (Github)</a></li>
 </ul>
-<h3 id="stm32">STM32を使う</h3>
-<ul>
-<li>環境構築およびLチカ</li>
-<li>UART通信(ツールの使い方を習得する)</li>
-<li>S.Busを受信する</li>
-<li>I2C通信</li>
-<li>サーボモーターを制御する(PWM)</li>
-</ul>
-<h2 id="stm32_1">STM32のドキュメントについて</h2>
-<p>本ドキュメントでは特に指定のない限りいかの環境にて動作を確認しています．
-- Nucleo-64 F411RE
-- STM32CubeIDE v1.13.2
-- </p>
 
   <hr>
 <div class="md-source-file">
@@ -717,16 +881,16 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "content.code.annotate"], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
       
-        <script src="javascripts/config.js"></script>
+        <script src="../../javascripts/config.js"></script>
       
     
   </body>
