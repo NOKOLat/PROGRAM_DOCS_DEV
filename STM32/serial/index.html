@@ -441,6 +441,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2. UARTとツールの使い方
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -450,6 +461,100 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    目標
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    プロジェクト作成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cubemx" class="md-nav__link">
+    マイコンの設定（CubeMX）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    プログラミング
+  </a>
+  
+    <nav class="md-nav" aria-label="プログラミング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wrapper" class="md-nav__link">
+    Wrapperファイルの作成
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    サンプルコード
+  </a>
+  
+    <nav class="md-nav" aria-label="サンプルコード">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wrapperhpp" class="md-nav__link">
+    wrapper.hpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrappercpp" class="md-nav__link">
+    wrapper.cpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mainc" class="md-nav__link">
+    main.c
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -502,6 +607,89 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    目標
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    プロジェクト作成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cubemx" class="md-nav__link">
+    マイコンの設定（CubeMX）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    プログラミング
+  </a>
+  
+    <nav class="md-nav" aria-label="プログラミング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wrapper" class="md-nav__link">
+    Wrapperファイルの作成
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    サンプルコード
+  </a>
+  
+    <nav class="md-nav" aria-label="サンプルコード">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wrapperhpp" class="md-nav__link">
+    wrapper.hpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrappercpp" class="md-nav__link">
+    wrapper.cpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mainc" class="md-nav__link">
+    main.c
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -519,13 +707,122 @@
 
 
 <h1 id="uartserial">UART（Serial通信）とツールの使い方</h1>
+<h2 id="_1">目標</h2>
+<ul>
+<li>STM32CubeIDEにおけるプロジェクト作成時の定形作業をできるようになる</li>
+<li>HALライブラリの規則を知る</li>
+<li>UARTを使えるようになる</li>
+</ul>
+<h2 id="_2">プロジェクト作成</h2>
+<ol>
+<li>メニューバーから <code>File/New/STM32 Project</code> を選択する<blockquote>
+<p>データのダウンロードが自動で行われることがある</p>
+</blockquote>
+</li>
+<li>マイコンの選択を行う<blockquote>
+<ol>
+<li><code>Commercial Part Number</code>に "F446RE"と入力する</li>
+<li><code>STM32F446RET6</code>を選択する</li>
+<li>次へ進む
+  <img alt="" src="../_res/environmentSetUp/Board-select.png" /></li>
+</ol>
+</blockquote>
+</li>
+<li><code>Project Name</code>を入力する<blockquote>
+<p>プロジェクト名は自分で分かれば何でも良いです．
+特にこだわりがないなら<code>UART</code>としておきましょう．</p>
+</blockquote>
+</li>
+<li><code>Targeted Language</code>を<code>c++</code>にする</li>
+</ol>
+<h2 id="cubemx">マイコンの設定（CubeMX）</h2>
+<ol>
+<li>conecctibityからUSART2を選択する</li>
+<li>Modeを<code>Asynchronous</code>に設定する</li>
+<li><code>Baud Rate</code>を<code>115200</code>に設定する</li>
+<li>マイコンの<code>PA2, PA3</code>がUART機能に割り当てられていることを確認する<blockquote>
+<p><img alt="" src="../_res/uart_cubeMX.png" /></p>
+</blockquote>
+</li>
+<li>写真を参考にチェックを入れる<blockquote>
+<p>このチェックを入れることを前提としてライブラリの作成等をしているので，忘れないようにしましょう．
+<img alt="" src="../_res/cubeMX_codeGenerator.png" />
+マイコンの設定は<code>&lt;Project Name&gt;.ioc</code>のように拡張子が<strong>ioc</strong>のファイルに保存されている．このファイルを開くとマイコンの設定の画面が開く．</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="_3">プログラミング</h2>
+<h3 id="wrapper">Wrapperファイルの作成</h3>
+<p>本環境ではmain関数がmain.c（C言語）に作成されるため，c++の機能を使用するためにWrapperを作成する必要がある．
+1. <code>Core/Inc</code>に<code>wrapper.hpp</code>を作る
+2. <code>Core/Src</code>に<code>wrapper.cpp</code>を作る</p>
+<h2 id="_4">サンプルコード</h2>
+<h3 id="wrapperhpp">wrapper.hpp</h3>
+<div class="codehilite"><pre><span></span><code><span class="cp">#ifndef INC_WRAPPER_HPP_</span>
+<span class="cp">#define INC_WRAPPER_HPP_</span>
+
+<span class="cp">#ifdef __cplusplus</span>
+<span class="k">extern</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="cp">#endif</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">debug</span><span class="p">();</span>
+
+<span class="cp">#ifdef __cplusplus</span>
+<span class="p">};</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#endif </span><span class="cm">/* INC_WRAPPER_HPP_ */</span>
+</code></pre></div>
+
+<h3 id="wrappercpp">wrapper.cpp</h3>
+<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;usart.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(){</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">str</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">HAL_UART_Transmit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;count:&quot;</span><span class="o">+</span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">count</span><span class="o">++</span><span class="p">);</span>
+<span class="w">    </span><span class="n">HAL_UART_Transmit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">str</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="n">str</span><span class="p">.</span><span class="n">length</span><span class="p">(),</span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="mainc">main.c</h3>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* Private includes ----------------------------------------------------------*/</span>
+<span class="cm">/* USER CODE BEGIN Includes */</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;wrapper.hpp&quot;</span>
+<span class="cm">/* USER CODE END Includes */</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="cm">/* USER CODE BEGIN 2 */</span>
+<span class="w">  </span><span class="n">init</span><span class="p">();</span>
+<span class="w">  </span><span class="cm">/* USER CODE END 2 */</span>
+
+<span class="w">  </span><span class="cm">/* Infinite loop */</span>
+<span class="w">  </span><span class="cm">/* USER CODE BEGIN WHILE */</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">      </span><span class="n">loop</span><span class="p">();</span>
+<span class="w">    </span><span class="cm">/* USER CODE END WHILE */</span>
+
+<span class="w">    </span><span class="cm">/* USER CODE BEGIN 3 */</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="cm">/* USER CODE END 3 */</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 21, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2023</span>
       
     
   </small>
