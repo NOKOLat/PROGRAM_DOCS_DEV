@@ -513,19 +513,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    サンプルコード
-  </a>
-  
-    <nav class="md-nav" aria-label="サンプルコード">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#wrapperhpp" class="md-nav__link">
     wrapper.hpp
@@ -535,6 +522,67 @@
         
           <li class="md-nav__item">
   <a href="#wrappercpp" class="md-nav__link">
+    wrapper.cpp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hal" class="md-nav__link">
+    HALライブラリの解説
+  </a>
+  
+    <nav class="md-nav" aria-label="HALライブラリの解説">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    命名規則
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hal_uart_transmituart_handletypedef-huart-const-uint8_t-pdata-uint16_t-size-uint32_t-timeout" class="md-nav__link">
+    HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    期待する動作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    サンプルコード
+  </a>
+  
+    <nav class="md-nav" aria-label="サンプルコード">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wrapperhpp_1" class="md-nav__link">
+    wrapper.hpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrappercpp_1" class="md-nav__link">
     wrapper.cpp
   </a>
   
@@ -649,19 +697,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    サンプルコード
-  </a>
-  
-    <nav class="md-nav" aria-label="サンプルコード">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#wrapperhpp" class="md-nav__link">
     wrapper.hpp
@@ -671,6 +706,67 @@
         
           <li class="md-nav__item">
   <a href="#wrappercpp" class="md-nav__link">
+    wrapper.cpp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hal" class="md-nav__link">
+    HALライブラリの解説
+  </a>
+  
+    <nav class="md-nav" aria-label="HALライブラリの解説">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    命名規則
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hal_uart_transmituart_handletypedef-huart-const-uint8_t-pdata-uint16_t-size-uint32_t-timeout" class="md-nav__link">
+    HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    期待する動作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    サンプルコード
+  </a>
+  
+    <nav class="md-nav" aria-label="サンプルコード">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wrapperhpp_1" class="md-nav__link">
+    wrapper.hpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrappercpp_1" class="md-nav__link">
     wrapper.cpp
   </a>
   
@@ -710,6 +806,7 @@
 <h2 id="_1">目標</h2>
 <ul>
 <li>STM32CubeIDEにおけるプロジェクト作成時の定形作業をできるようになる</li>
+<li><a href="#プロジェクト作成">プロジェクトの作成</a>から<a href="#wrapperファイルの作成">Wrapperの作成</a>までを定形作業とする</li>
 <li>HALライブラリの規則を知る</li>
 <li>UARTを使えるようになる</li>
 </ul>
@@ -755,8 +852,28 @@
 <p>本環境ではmain関数がmain.c（C言語）に作成されるため，c++の機能を使用するためにWrapperを作成する必要がある．
 1. <code>Core/Inc</code>に<code>wrapper.hpp</code>を作る
 2. <code>Core/Src</code>に<code>wrapper.cpp</code>を作る</p>
-<h2 id="_4">サンプルコード</h2>
 <h3 id="wrapperhpp">wrapper.hpp</h3>
+<p>c++とc言語を繋ぐための関数のプロトタイプ宣言をしている．<code>extern "C" {}</code>で囲われた関数は内部的にc言語と同様に定義されるため，C言語のファイルから呼び出すことが可能である．基本的には，必要な機能はどのようなプロジェクトでも同じであるため，ファイルの中身はコピーして使いまわすことが多い．</p>
+<h3 id="wrappercpp">wrapper.cpp</h3>
+<p>Arduino環境でソースコードを書くときと同様にコードを書くファイルである．</p>
+<h2 id="hal">HALライブラリの解説</h2>
+<h3 id="_4">命名規則</h3>
+<p>STMマイコンのプログラムで使用する関数群のことを"<strong>HALライブラリ</strong>(HAL)"と呼ぶ．関数の命名規則は一貫して以下に従っている．</p>
+<div class="codehilite"><pre><span></span><code>HAL_&lt;periferal name&gt;_&lt;behavior&gt;(&lt;periferal handler&gt;,...);
+</code></pre></div>
+
+<p>'<periferal name>'は<code>UART</code>や<code>GPIO</code>などのマイコンの機能の名前である．<br />
+<code>&lt;behaviot&gt;</code>はどのような動作をするかを示している．例えば，通信で受信をするときには<code>Receive</code>のようになる．
+<code>&lt;behaviot&gt;</code>は複数のアンダーバーで区切られていることがある．</p>
+<h3 id="hal_uart_transmituart_handletypedef-huart-const-uint8_t-pdata-uint16_t-size-uint32_t-timeout"><code>HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout)</code></h3>
+<p>UARTでデータを送信するための関数である．<code>pData</code>には送信したい配列の先頭アドレスを渡す．<code>Size</code>は送信データの長さ(byte)である．
+<code>Timeout</code>で指定した時間(ms)だけ通信が終了しなかった場合に関数を終了する．<code>Timeout</code>は通信処理が上手くいかないときに処理全体がフリーズすることを防ぐためにある．
+<code>huart</code>にはペリフェラルのハンドラーのポインターを渡す．コード生成の時点でuart1であれば<code>huart1</code>のように自動で宣言されている．</p>
+<h2 id="_5">期待する動作</h2>
+<p>本プログラムはシリアルモニタに接続した状態で起動することを想定している．<br />
+起動時に<code>Hello World</code>と表示され，その後，<code>count:&lt;number&gt;</code>と表示され<number>がカウントアップされていく．</p>
+<h2 id="_6">サンプルコード</h2>
+<h3 id="wrapperhpp_1">wrapper.hpp</h3>
 <div class="codehilite"><pre><span></span><code><span class="cp">#ifndef INC_WRAPPER_HPP_</span>
 <span class="cp">#define INC_WRAPPER_HPP_</span>
 
@@ -767,8 +884,6 @@
 <span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">debug</span><span class="p">();</span>
-
 <span class="cp">#ifdef __cplusplus</span>
 <span class="p">};</span>
 <span class="cp">#endif</span>
@@ -776,7 +891,7 @@
 <span class="cp">#endif </span><span class="cm">/* INC_WRAPPER_HPP_ */</span>
 </code></pre></div>
 
-<h3 id="wrappercpp">wrapper.cpp</h3>
+<h3 id="wrappercpp_1">wrapper.cpp</h3>
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;usart.h&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
 
@@ -821,7 +936,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 25, 2023</span>
       
     
   </small>
