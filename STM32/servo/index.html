@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../serial/">
+        <link rel="prev" href="../SBUS/">
       
       
-        <link rel="next" href="../../STM32/environmentSetUp/">
+        <link rel="next" href="../../communication/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -269,20 +269,18 @@
       
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -296,7 +294,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Arduino
@@ -309,7 +307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../environment/" class="md-nav__link">
+      <a href="../../arduino/environment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -329,7 +327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LED_Brink/" class="md-nav__link">
+      <a href="../../arduino/LED_Brink/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -349,11 +347,136 @@
   
   
     <li class="md-nav__item">
-      <a href="../serial/" class="md-nav__link">
+      <a href="../../arduino/serial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     3. UART通信(serial)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arduino/servo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. SERVO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    STM32
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            STM32
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../environmentSetUp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 環境構築とLチカ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../serial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. UARTとツールの使い方
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SBUS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. S.BUS
   </span>
   
 
@@ -422,14 +545,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    サーボモータの制御方法
+  <a href="#cubemx" class="md-nav__link">
+    CubeMXの設定
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     コード解説
   </a>
   
@@ -437,22 +560,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#servo-servo" class="md-nav__link">
-    Servo servo;
+  <a href="#hal_tim_pwm_starttim_handletypedef-htim-uint32_t-channel" class="md-nav__link">
+    HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#servoattach7" class="md-nav__link">
-    servo.attach(7)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#servowritemicrosecondsint-value" class="md-nav__link">
-    servo.writeMicroseconds(int value)
+  <a href="#__hal_tim_set_compare__handle__-__channel__-__compare__" class="md-nav__link">
+    __HAL_TIM_SET_COMPARE(__HANDLE__, __CHANNEL__, __COMPARE__)
   </a>
   
 </li>
@@ -463,9 +579,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#source-code" class="md-nav__link">
-    Source Code
+  <a href="#_3" class="md-nav__link">
+    ソースコード
   </a>
+  
+    <nav class="md-nav" aria-label="ソースコード">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wrappercpp" class="md-nav__link">
+    wrapper.cpp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -473,129 +602,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    STM32
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            STM32
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../STM32/environmentSetUp/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    1. 環境構築とLチカ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../STM32/serial/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    2. UARTとツールの使い方
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../STM32/SBUS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    3. S.BUS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../STM32/servo/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    4. SERVO
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -661,14 +667,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    サーボモータの制御方法
+  <a href="#cubemx" class="md-nav__link">
+    CubeMXの設定
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     コード解説
   </a>
   
@@ -676,22 +682,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#servo-servo" class="md-nav__link">
-    Servo servo;
+  <a href="#hal_tim_pwm_starttim_handletypedef-htim-uint32_t-channel" class="md-nav__link">
+    HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#servoattach7" class="md-nav__link">
-    servo.attach(7)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#servowritemicrosecondsint-value" class="md-nav__link">
-    servo.writeMicroseconds(int value)
+  <a href="#__hal_tim_set_compare__handle__-__channel__-__compare__" class="md-nav__link">
+    __HAL_TIM_SET_COMPARE(__HANDLE__, __CHANNEL__, __COMPARE__)
   </a>
   
 </li>
@@ -702,9 +701,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#source-code" class="md-nav__link">
-    Source Code
+  <a href="#_3" class="md-nav__link">
+    ソースコード
   </a>
+  
+    <nav class="md-nav" aria-label="ソースコード">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wrappercpp" class="md-nav__link">
+    wrapper.cpp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -729,41 +741,90 @@
 <h1 id="4-servo">4. SERVO</h1>
 <h2 id="_1">目標</h2>
 <ul>
-<li>サーボモータを制御する原理を習得する</li>
-<li>マイコンからサーボモータを制御できるようになる</li>
+<li>STM32マイコンでのタイマの設定方法を学ぶ</li>
 </ul>
-<h2 id="_2">サーボモータの制御方法</h2>
-<p>サーボモータは信号線に<a href="https://www.rohm.co.jp/electronics-basics/micon/mi_what11"><strong>PWM</strong></a>を入力することで制御する．
-PWMのパルス幅とサーボモータの角度が対応している．
-PWMの周期はおよそ2500usであり，使用するパルス幅は500usから2200usである．</p>
-<h2 id="_3">コード解説</h2>
-<h3 id="servo-servo"><code>Servo servo;</code></h3>
-<p><code>Servo</code>クラスのインスタンスを作成している．
-クラス(class)はc++の機能の1つで，c言語の構造体に似たものである．
-関数と変数を1つのまとまりとして，新しい型を定義している．</p>
-<h3 id="servoattach7"><code>servo.attach(7)</code></h3>
-<p>D7ピンをサーボモータに接続し使用することを設定している．</p>
-<h3 id="servowritemicrosecondsint-value"><code>servo.writeMicroseconds(int value)</code></h3>
-<p>PWMのパルス幅をミリ秒単位で設定する．最大値は<code>2500</code>くらいのはず．</p>
-<h2 id="source-code">Source Code</h2>
-<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Servo.h&gt;</span><span class="c1"> </span>
+<h2 id="cubemx">CubeMXの設定</h2>
+<ol>
+<li>使用するピンを選択する<blockquote>
+<p>今回は<em>PA8</em>を<em>TIM1_CH1</em>に設定する
+<img alt="" src="../_res/servo_PA8.png" /></p>
+</blockquote>
+</li>
+<li>
+<p>クロックの確認および設定</p>
+<blockquote>
+<p>Timerを使用するときは<strong>APB1 Timer clock</strong>および<strong>APB2 Timer clock</strong>の値を確認する．
+この値は，Timerのパラメータを設定する際に使用する．
+<img alt="" src="../_res/servo_clockConfig.png" /></p>
+</blockquote>
+</li>
+<li>
+<p>Timerの設定</p>
+<blockquote>
+<ol>
+<li>TIM1のChannel1を<code>PWM Generation CH1</code>に設定する</li>
+<li>Prescalerを<code>83</code>に設定する</li>
+<li>Counter Periodを<code>2500</code>に設定する
+<img alt="" src="../_res/servo_timParam.png" /></li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<h2 id="_2">コード解説</h2>
+<h3 id="hal_tim_pwm_starttim_handletypedef-htim-uint32_t-channel"><code>HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel)</code></h3>
+<div class="codehilite"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm">  * @brief  Starts the PWM signal generation.</span>
+<span class="cm">  * @param  htim TIM handle</span>
+<span class="cm">  * @param  Channel TIM Channels to be enabled</span>
+<span class="cm">  *          This parameter can be one of the following values:</span>
+<span class="cm">  *            @arg TIM_CHANNEL_1: TIM Channel 1 selected</span>
+<span class="cm">  *            @arg TIM_CHANNEL_2: TIM Channel 2 selected</span>
+<span class="cm">  *            @arg TIM_CHANNEL_3: TIM Channel 3 selected</span>
+<span class="cm">  *            @arg TIM_CHANNEL_4: TIM Channel 4 selected</span>
+<span class="cm">  * @retval HAL status</span>
+<span class="cm">  */</span>
+</code></pre></div>
 
-<span class="n">Servo</span><span class="w"> </span><span class="n">servo</span><span class="p">;</span>
+<h3 id="__hal_tim_set_compare__handle__-__channel__-__compare__"><code>__HAL_TIM_SET_COMPARE(__HANDLE__, __CHANNEL__, __COMPARE__)</code></h3>
+<div class="codehilite"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm">  * @brief  Set the TIM Capture Compare Register value on runtime without calling another time ConfigChannel function.</span>
+<span class="cm">  * @param  __HANDLE__ TIM handle.</span>
+<span class="cm">  * @param  __CHANNEL__ TIM Channels to be configured.</span>
+<span class="cm">  *          This parameter can be one of the following values:</span>
+<span class="cm">  *            @arg TIM_CHANNEL_1: TIM Channel 1 selected</span>
+<span class="cm">  *            @arg TIM_CHANNEL_2: TIM Channel 2 selected</span>
+<span class="cm">  *            @arg TIM_CHANNEL_3: TIM Channel 3 selected</span>
+<span class="cm">  *            @arg TIM_CHANNEL_4: TIM Channel 4 selected</span>
+<span class="cm">  * @param  __COMPARE__ specifies the Capture Compare register new value.</span>
+<span class="cm">  * @retval None</span>
+<span class="cm">  */</span>
+</code></pre></div>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// put your setup code here, to run once:</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
-<span class="w">  </span><span class="n">servo</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+<h2 id="_3">ソースコード</h2>
+<h3 id="wrappercpp">wrapper.cpp</h3>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* Pre-Processor Begin */</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;wrapper.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gpio.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;tim.h&quot;</span>
+<span class="cm">/* Pre-Processor End */</span>
+
+<span class="cm">/* Variable Begin */</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">CENTER_VALUE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1500</span><span class="p">;</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="cm">/* Variable End */</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+<span class="w">    </span><span class="n">HAL_TIM_PWM_Start</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim1</span><span class="p">,</span><span class="w"> </span><span class="n">TIM_CHANNEL_1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">__HAL_TIM_SET_COMPARE</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim1</span><span class="p">,</span><span class="w"> </span><span class="n">TIM_CHANNEL_1</span><span class="p">,</span><span class="w"> </span><span class="n">CENTER_VALUE</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// put your main code here, to run repeatedly:</span>
-<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">500</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">count</span><span class="o">++/</span><span class="mf">1000.0</span><span class="o">*</span><span class="mf">2.0</span><span class="o">*</span><span class="n">M_PI</span><span class="p">)</span><span class="o">+</span><span class="mi">1600</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">sin</span><span class="p">(</span><span class="n">count</span><span class="o">++*</span><span class="mf">2.0</span><span class="o">*</span><span class="n">M_PI</span><span class="o">/</span><span class="mf">1000.0</span><span class="p">)</span><span class="o">*</span><span class="mi">500</span><span class="p">;</span>
+<span class="w">    </span><span class="n">__HAL_TIM_SET_COMPARE</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim1</span><span class="p">,</span><span class="w"> </span><span class="n">TIM_CHANNEL_1</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="p">(</span><span class="n">CENTER_VALUE</span><span class="o">+</span><span class="n">tmp</span><span class="p">));</span>
+<span class="w">    </span><span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">servo</span><span class="p">.</span><span class="n">writeMicroseconds</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 
