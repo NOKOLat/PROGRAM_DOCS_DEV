@@ -854,7 +854,7 @@
 <h3 id="uart">シリアルモニタに出力するためのUART</h3>
 <p><img alt="" src="../_res/sbus_debugSerial.png" /></p>
 <h2 id="_1">期待される動作</h2>
-<p>マイコンの起動後に，LEDが1秒間の点灯・消灯をしSBUSの受信を開始する．
+<p>マイコンの起動後に，LEDが1秒間の点灯・消灯をした後にSBUSの受信を開始する．
 SBUSを正常に受信できている場合は，シリアルモニタにSBUSで受信している値が表示される．</p>
 <h2 id="_2">コードの解説</h2>
 <h3 id="hal_uart_receive_dmauart_handletypedef-huart-uint8_t-pdata-uint16_t-size">HAL_UART_Receive_DMA(UART_HandleTypeDef <em>huart, uint8_t </em>pData, uint16_t Size)</h3>
