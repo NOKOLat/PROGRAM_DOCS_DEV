@@ -553,6 +553,13 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    マイコンと受信機の接続
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     コードの解説
   </a>
   
@@ -586,7 +593,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     ソースコード
   </a>
   
@@ -743,6 +750,13 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    マイコンと受信機の接続
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     コードの解説
   </a>
   
@@ -776,7 +790,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     ソースコード
   </a>
   
@@ -856,14 +870,24 @@
 <h2 id="_1">期待される動作</h2>
 <p>マイコンの起動後に，LEDが1秒間の点灯・消灯をした後にSBUSの受信を開始する．
 SBUSを正常に受信できている場合は，シリアルモニタにSBUSで受信している値が表示される．</p>
-<h2 id="_2">コードの解説</h2>
+<h2 id="_2">マイコンと受信機の接続</h2>
+<p>マイコンと受信機の接続に必要な回路例を以下に示す．</p>
+<ul>
+<li>Vddに3.3Vを接続する</li>
+<li>VssにGNDを接続する</li>
+<li>抵抗値は<span class="arithmatex">\(1k\Omega\)</span>程度を使用する</li>
+<li>図中央の記号はNchFETを表している</li>
+<li>2N7000を使用し，動作確認をした</li>
+</ul>
+<p><img alt="" src="../_res/sbus_notCircuit.png" /></p>
+<h2 id="_3">コードの解説</h2>
 <h3 id="hal_uart_receive_dmauart_handletypedef-huart-uint8_t-pdata-uint16_t-size">HAL_UART_Receive_DMA(UART_HandleTypeDef <em>huart, uint8_t </em>pData, uint16_t Size)</h3>
 <p>この関数はUARTをDMA(Direct memory access)モードで受信する関数である．DMAで受信するとき，受信完了を待たずに他の処理を実行できるため，プログラム全体の処理速度の観点で優れている．DMAの特徴は受信したデータをメモリーに転送する処理をCPUを使わずに行うことである．反対に，DMA以外ではデータを1バイト受信するごとにメモリーに転送する処理を行う必要がある．</p>
 <h3 id="hal_uart_rxcpltcallbackuart_handletypedef-huart">HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)</h3>
 <p>この関数はDMAもしくはITでUARTによるデータの受信が終了した際に呼び出される関数である．どのUARTの通信が終了したかは引数を見ると確認できる．複数のUARTを使用するときは<code>if(huart==&amp;huart2){}</code>のように場合分けを行う．</p>
 <h3 id="class-sbus">class SBUS{}</h3>
 <p>c++の<strong>class</strong>という機能を使用してSBUSに関係する処理などを定義しています．見慣れない関数や書き方が多いと思いますが，c++の機能を解説すると長くなるので省略します．口頭で解説するので，解説が必要なら直接聞いてください．</p>
-<h2 id="_3">ソースコード</h2>
+<h2 id="_4">ソースコード</h2>
 <h3 id="wrappercpp">wrapper.cpp</h3>
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;wrapper.hpp&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;SBUS.hpp&quot;</span>
@@ -1041,7 +1065,7 @@ SBUSを正常に受信できている場合は，シリアルモニタにSBUSで
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 7, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 8, 2023</span>
       
     
   </small>
