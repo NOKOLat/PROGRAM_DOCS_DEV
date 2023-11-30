@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -247,6 +247,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
         
@@ -263,6 +264,7 @@
     
       
       
+  
   
   
   
@@ -302,6 +304,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../environment/" class="md-nav__link">
         
@@ -319,6 +322,7 @@
             
               
                 
+  
   
   
   
@@ -342,6 +346,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../serial/" class="md-nav__link">
         
@@ -359,6 +364,7 @@
             
               
                 
+  
   
   
   
@@ -386,6 +392,7 @@
     
       
       
+  
   
   
   
@@ -425,6 +432,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../STM32/environmentSetUp/" class="md-nav__link">
         
@@ -442,6 +450,7 @@
             
               
                 
+  
   
   
   
@@ -465,6 +474,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../STM32/SBUS/" class="md-nav__link">
         
@@ -482,6 +492,7 @@
             
               
                 
+  
   
   
   
@@ -509,6 +520,7 @@
     
       
       
+  
   
   
   
@@ -554,28 +566,36 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    目標
+    <span class="md-ellipsis">
+      目標
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#sbus" class="md-nav__link">
-    S.BUSとは
+    <span class="md-ellipsis">
+      S.BUSとは
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#sbus_1" class="md-nav__link">
-    S.BUSを受信するための回路
+    <span class="md-ellipsis">
+      S.BUSを受信するための回路
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    コード解説
+    <span class="md-ellipsis">
+      コード解説
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="コード解説">
@@ -583,21 +603,27 @@
         
           <li class="md-nav__item">
   <a href="#whileserialavailablesbus_len" class="md-nav__link">
-    while(Serial.available()&lt;SBUS_LEN)
+    <span class="md-ellipsis">
+      while(Serial.available()&lt;SBUS_LEN)
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#serialwriteuint8_t-sbusreceivefrontsbus_len" class="md-nav__link">
-    Serial.write((uint8_t *)sbusReceive.front(),SBUS_LEN)
+    <span class="md-ellipsis">
+      Serial.write((uint8_t *)sbusReceive.front(),SBUS_LEN)
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#digitalwrite13-digitalread13" class="md-nav__link">
-    digitalWrite(13, !digitalRead(13))
+    <span class="md-ellipsis">
+      digitalWrite(13, !digitalRead(13))
+    </span>
   </a>
   
 </li>
@@ -609,7 +635,9 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    コードの実行結果
+    <span class="md-ellipsis">
+      コードの実行結果
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="コードの実行結果">
@@ -617,7 +645,9 @@
         
           <li class="md-nav__item">
   <a href="#led" class="md-nav__link">
-    LEDの点滅
+    <span class="md-ellipsis">
+      LEDの点滅
+    </span>
   </a>
   
 </li>
@@ -629,7 +659,9 @@
       
         <li class="md-nav__item">
   <a href="#source-code" class="md-nav__link">
-    Source code
+    <span class="md-ellipsis">
+      Source code
+    </span>
   </a>
   
 </li>
@@ -708,7 +740,7 @@ UARTの設定は以下の通りである．</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 8, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 30, 2023</span>
       
     
   </small>
@@ -776,7 +808,7 @@ UARTの設定は以下の通りである．</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.81fa17fe.min.js"></script>
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
